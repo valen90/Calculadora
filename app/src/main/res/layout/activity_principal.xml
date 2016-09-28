@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.valen.calculadorados.Principal"
+    android:background="@drawable/grad">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/primeraFila">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/datosGrande"
+            android:layout_weight="1"
+            android:textSize="40sp"
+            android:textAlignment="viewEnd"
+            android:maxLines="1"
+            android:maxWidth="@dimen/activity_horizontal_margin"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollHorizontally="false"
+            android:textColor="@android:color/background_light" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/segundaFila">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/datosChico"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:textAlignment="viewEnd"
+            android:maxWidth="@dimen/activity_horizontal_margin"
+            android:textColor="@android:color/background_light" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/filaVacia">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textSize="36sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/filaMemoria" >
+
+        <Button
+            android:text="@string/mc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryClear"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarLimpiarMemoria"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/ms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryStorage"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarGuardarMemoria"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/mr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryRecall"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarLlamarMemoria"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarBorrado"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/terceraFila"
+        >
+
+        <Button
+            android:text="@string/siete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/siete"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/ocho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ocho"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/nueve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nueve"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/division"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/division"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarOp"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cuartaFila" >
+
+        <Button
+            android:text="@string/cuatro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cuatro"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/cinco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cinco"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/seis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seis"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/multiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/multiplicacion"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarOp"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/quitaFila" >
+
+        <Button
+            android:text="@string/uno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uno"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/dos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dos"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/tres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tres"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/menos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resta"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarOp"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sextaFila" >
+
+        <Button
+            android:text="@string/coma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/botonComa"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarComa"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/cero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cero"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarNumero"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/igual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/igual"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarIgual"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/mas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/suma"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="30sp"
+            android:onClick="pulsarOp"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+    </TableRow>
+</TableLayout>
+
