@@ -23,7 +23,6 @@ public class Principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_principal);
 
         pantallaGrande = (TextView)findViewById(R.id.datosGrande);
@@ -54,6 +53,9 @@ public class Principal extends AppCompatActivity {
             pantallaChica.setText(op1+" "+operacion+" ");
             realizada=false;
             cargada=false;
+        }else{
+            operacion = ((Button) view).getText().toString();
+            pantallaChica.setText(op1+" "+operacion+" "+pantallaGrande.getText().toString());
         }
     }
 
@@ -92,7 +94,14 @@ public class Principal extends AppCompatActivity {
         pantallaGrande.setText("");
         op1=op2=0;
         realizada=false;
+    }
 
+    protected void pulsarBorrarUltimo(View view){
+        String s = pantallaGrande.getText().toString();
+        if(s.length()>0) {
+            pantallaGrande.setText(s.substring(0, s.length()-1));
+            pantallaChica.setText(pantallaChica.getText().toString().substring(0,pantallaChica.getText().length()-1));
+        }
     }
 
     protected void pulsarComa(View view){
