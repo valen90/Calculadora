@@ -46,7 +46,7 @@ public class Principal extends AppCompatActivity {
     }
 
     protected void pulsarOp(View view){
-        if(operacion==null) {
+        if(operacion==null && !pantallaGrande.getText().toString().isEmpty()) {
             op1=Double.parseDouble(pantallaGrande.getText().toString());
             operacion = ((Button) view).getText().toString();
             pantallaGrande.setText("");
@@ -98,10 +98,13 @@ public class Principal extends AppCompatActivity {
 
     protected void pulsarBorrarUltimo(View view){
         String s = pantallaGrande.getText().toString();
-        if(s.length()>0) {
+        if(s.length()>0 && !realizada) {
             pantallaGrande.setText(s.substring(0, s.length()-1));
             pantallaChica.setText(pantallaChica.getText().toString().substring(0,pantallaChica.getText().length()-1));
+        }else if(s.length()>0){
+            pantallaGrande.setText(s.substring(0, s.length()-1));
         }
+
     }
 
     protected void pulsarComa(View view){
