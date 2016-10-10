@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_principal"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.valen.calculadorados.Principal"
     android:background="@drawable/grad">
-
 
     <TableRow
         android:layout_width="match_parent"
@@ -23,7 +15,7 @@
             android:layout_height="match_parent"
             android:id="@+id/datosGrande"
             android:layout_weight="1"
-            android:textSize="40sp"
+            android:textSize="25sp"
             android:textAlignment="viewEnd"
             android:maxLines="1"
             android:maxWidth="@dimen/activity_horizontal_margin"
@@ -43,75 +35,10 @@
             android:layout_height="match_parent"
             android:id="@+id/datosChico"
             android:layout_weight="1"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textAlignment="viewEnd"
             android:maxWidth="@dimen/activity_horizontal_margin"
             android:textColor="@android:color/background_light" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/filaVacia">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textSize="36sp" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/filaMemoria" >
-
-        <Button
-            android:text="@string/mc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/memoryClear"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
-            android:onClick="pulsarLimpiarMemoria"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="sans-serif-condensed"
-            android:typeface="sans" />
-
-        <Button
-            android:text="@string/ms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/memoryStorage"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
-            android:onClick="pulsarGuardarMemoria"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="sans-serif-condensed"
-            android:typeface="sans" />
-
-        <Button
-            android:text="@string/mr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/memoryRecall"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
-            android:onClick="pulsarLlamarMemoria"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="sans-serif-condensed"
-            android:typeface="sans" />
-
-        <Button
-            android:text="@string/c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
-            android:onClick="pulsarBorrado"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="sans-serif-condensed"
-            android:typeface="sans" />
     </TableRow>
 
     <TableRow
@@ -126,7 +53,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/siete"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -138,7 +65,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ocho"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -150,7 +77,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/nueve"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -162,11 +89,42 @@
             android:layout_height="wrap_content"
             android:id="@+id/division"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarOp"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
             android:typeface="sans" />
+
+        <Button
+            android:text="@string/mc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryClear"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="20sp"
+            android:onClick="pulsarLimpiarMemoria"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="20sp"
+            android:onClick="pulsarBorrado"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_input_delete"
+            android:id="@+id/imageButton"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless"
+            android:onClick="pulsarBorrarUltimo"/>
     </TableRow>
 
     <TableRow
@@ -180,7 +138,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/cuatro"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -192,7 +150,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/cinco"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -204,7 +162,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/seis"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -216,11 +174,36 @@
             android:layout_height="wrap_content"
             android:id="@+id/multiplicacion"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarOp"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
             android:typeface="sans" />
+
+        <Button
+            android:text="@string/ms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryStorage"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="20sp"
+            android:onClick="pulsarGuardarMemoria"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/sin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seno"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="20sp"
+            android:onClick="pulsarSenos"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
     </TableRow>
 
     <TableRow
@@ -234,7 +217,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/uno"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -246,7 +229,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dos"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -258,7 +241,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tres"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -270,8 +253,31 @@
             android:layout_height="wrap_content"
             android:id="@+id/resta"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarOp"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+
+        <Button
+            android:text="@string/mr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryRecall"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="20sp"
+            android:onClick="pulsarLlamarMemoria"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+        <Button
+            android:text="@string/cos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coseno"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="20sp"
+            android:onClick="pulsarCoseno"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
             android:typeface="sans" />
@@ -288,7 +294,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/botonComa"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarComa"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -300,7 +306,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/cero"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarNumero"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -312,7 +318,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/igual"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarIgual"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
@@ -324,47 +330,33 @@
             android:layout_height="wrap_content"
             android:id="@+id/suma"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:onClick="pulsarOp"
             android:textColor="@android:color/background_light"
             android:fontFamily="sans-serif-condensed"
             android:typeface="sans" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/septimaFila" >
-
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:clickable="false" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:clickable="false" />
-
-        <Button
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/vacio"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:clickable="false" />
-
-        <ImageButton
+            android:textSize="20sp"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
+        <Button
+            android:text="@string/sqrt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_input_delete"
-            android:id="@+id/imageButton"
-            style="@android:style/Widget.DeviceDefault.Button.Borderless"
-            android:onClick="pulsarBorrarUltimo"/>
+            android:id="@+id/sqrt"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="20sp"
+            android:onClick="pulsarSqrt"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-condensed"
+            android:typeface="sans" />
     </TableRow>
-</TableLayout>
 
+
+</TableLayout>
