@@ -20,4 +20,7 @@
     <string name="mr">MR</string>
     <string name="ms">MS</string>
     <string name="multiplicacion">x</string>
+    <string name="cos">cos</string>
+    <string name="sin">sen</string>
+    <string name="sqrt">√</string>
 </resources>

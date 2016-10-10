@@ -21,7 +21,7 @@ public class Principal extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //Para que no se gire la pantalla
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
@@ -141,5 +141,55 @@ public class Principal extends AppCompatActivity {
                 cargada=true;
             }
         }
+    }
+
+    public void pulsarSenos(View view) {
+        if(!pantallaGrande.getText().toString().isEmpty()){
+            pantallaChica.setText("sin ( "+pantallaGrande.getText().toString()+" )");
+            pantallaGrande.setText(""+Math.sin(Double.parseDouble(pantallaGrande.getText().toString())));
+            realizada=true;
+        }
+    }
+
+    public void pulsarCoseno(View view){
+        if(!pantallaGrande.getText().toString().isEmpty()){
+            pantallaChica.setText("cos ( "+pantallaGrande.getText().toString()+" )");
+            pantallaGrande.setText(""+Math.cos(Double.parseDouble(pantallaGrande.getText().toString())));
+            realizada=true;
+        }
+    }
+
+    public void pulsarSqrt(View view){
+        if(!pantallaGrande.getText().toString().isEmpty()){
+            pantallaChica.setText("√ "+pantallaGrande.getText().toString());
+            pantallaGrande.setText(""+Math.sqrt(Double.parseDouble(pantallaGrande.getText().toString())));
+            realizada=true;
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putBoolean("realizada", realizada);
+        savedInstanceState.putBoolean("cargada", cargada);
+        savedInstanceState.putDouble("op1", op1);
+        savedInstanceState.putDouble("op2", op2);
+        savedInstanceState.putDouble("memoria", memoria);
+        savedInstanceState.putString("operacion", operacion);
+        savedInstanceState.putString("pantallaGrande",pantallaGrande.getText().toString());
+        savedInstanceState.putString("pantallaChica",pantallaChica.getText().toString());
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        realizada = savedInstanceState.getBoolean("realizada");
+        cargada = savedInstanceState.getBoolean("cargada");
+        op1 = savedInstanceState.getDouble("op1");
+        op2 = savedInstanceState.getDouble("op2");
+        memoria = savedInstanceState.getDouble("memoria");
+        operacion = savedInstanceState.getString("operacion");
+        pantallaGrande.setText(savedInstanceState.getString("pantallaGrande"));
+        pantallaChica.setText(savedInstanceState.getString("pantallaChica"));
     }
 }
